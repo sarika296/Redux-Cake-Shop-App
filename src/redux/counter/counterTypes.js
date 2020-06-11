@@ -1,0 +1,1 @@
+export const STORE_MONEY = 'STORE_MONEY'  
