@@ -1,7 +1,7 @@
-import { STORE_COUNTER } from './counterTypes'
+import { STORE_MONEY } from './counterTypes'
 
-export const storeChocolate = () => {
+export const storeMoney = () => {
     return {
-        type: STORE_COUNTER
+        type: STORE_MONEY
     }
 }
