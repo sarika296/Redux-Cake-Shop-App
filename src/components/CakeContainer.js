@@ -21,6 +21,6 @@ const mapDispatchToProps = dispatch => {
     return {
         buyCake: () => dispatch(buyCake())
     }
-}
+} 
 
 export default connect(mapStateToProps, mapDispatchToProps)(CakeContainer);
