@@ -10,7 +10,7 @@ function UserContainer({userData, fetchUsers}) {
     <h2>{userData.error}</h2>
     ):
         <div>
-            <h2>User List</h2>
+            <h2>User List from API</h2>
             <div>
                 {
                     userData && userData.users &&

@@ -1,26 +1,28 @@
-import React from 'react'
-import { buyIceCream } from '../redux'
-import { connect } from "react-redux"
- 
+import React, { useState } from 'react'
+import { connect } from 'react-redux'
+import { buyIceCream } from "../redux"
+
 function IceCreamContainer(props) {
-    return(
+    const [number, setNumber] = useState()
+    return (
         <div>
-            <h2>Number Of IceCream - {props.numOfIceCreams}</h2>
-            <button onClick={props.buyIceCream }>Buy IceCream</button>
+            <h2>Number of icecreams - {props.numOfIceCreams} </h2>
+            <input type='text' value={number} onChange={e => setNumber(e.target.value)} />
+            <button onClick= {() => props.buyIceCream(number)}>Buy {number} Ice Cream</button>
         </div>
     )
-}
+} 
 
 const mapStateToProps = state => {
-    return {
-        numOfIceCreams: state.iceCream.numOfIceCreams
-    }
+    return{
+        numOfIceCreams:state.iceCream.numOfIceCreams
+     }
 }
 
 const mapDispatchToProps = dispatch => {
-    return{
-        buyIceCream: () => dispatch(buyIceCream())
+    return {
+        buyIceCream: (number) => dispatch(buyIceCream(number))
     }
-}
+} 
 
-export default connect(mapStateToProps, mapDispatchToProps)(IceCreamContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(IceCreamContainer);
