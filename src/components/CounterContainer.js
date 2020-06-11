@@ -1,14 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import { storeMoney } from "../redux"
 
 function CounterContainer(props) {
-    const [number, setNumber] = useState()
     return (
         <div> 
-            <h2>Total Money - {props.totalMoney} </h2>
-            <input type='text' value={number} onChange={e => setNumber(e.target.value)} />
-            <button onClick= {() => props.storeMoney(number)}>Total Money</button>
+            <h2>Total Money To The Counter</h2>
+            <p style={{fontSize:20}}>Total Money - {props.totalMoney} </p>
         </div>
     )
 } 
