@@ -1,6 +1,6 @@
-import { BUY_CHOCOLATE } from './cakeTypes'
+import { BUY_CHOCOLATE } from './chocolateTypes'
 
-export const buyCHOCOLATE = (number) => {
+export const buyChocolate = (number) => {
     return {
         type: BUY_CHOCOLATE,
         payload: number

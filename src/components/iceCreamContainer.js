@@ -6,7 +6,7 @@ function IceCreamContainer(props) {
     const [number, setNumber] = useState()
     return (
         <div>
-            <h2>Number of icecreams - {props.numOfIceCreams} </h2>
+            <h2>Number of ice-creams - {props.numOfIceCreams} </h2>
             <input type='text' value={number} onChange={e => setNumber(e.target.value)} />
             <button onClick= {() => props.buyIceCream(number)}>Buy {number} Ice Cream</button>
         </div>
