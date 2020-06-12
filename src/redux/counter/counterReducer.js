@@ -1,4 +1,3 @@
-import { STORE_MONEY } from './counterTypes'
 import { BUY_CAKE } from '../cake/cakeTypes'
 import { BUY_CHOCOLATE } from '../chocolate/chocolateTypes'
 import { BUY_ICECREAM } from '../iceCream/iceCreamTypes'
@@ -9,10 +8,6 @@ const initialState = {
 
 const counterReducer = (state = initialState, action ) => {
     switch(action.type) {
-        case STORE_MONEY : return {
-            ...state,
-            totalMoney: state.totalMoney
-        }
 
         case BUY_CAKE : return {
             totalMoney: state.totalMoney + action.cost
