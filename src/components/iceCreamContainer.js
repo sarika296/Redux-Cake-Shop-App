@@ -3,12 +3,12 @@ import { connect } from 'react-redux'
 import { buyIceCream } from "../redux"
 
 function IceCreamContainer(props) {
-    const [number, setNumber] = useState()
+    const [quantity, setQuantity] = useState(1)
     return (
         <div>
             <h2>Number of ice-creams - {props.numOfIceCreams} </h2>
-            <input type='text' value={number} onChange={e => setNumber(e.target.value)} />
-            <button onClick= {() => props.buyIceCream(number)}>Buy {number} Ice Cream</button>
+            <input type='text' value={quantity} onChange={e => setQuantity(e.target.value)} />
+            <button onClick= {() => quantity<=props.numOfIceCreams ? props.buyIceCream(quantity) : props.buyIceCream(0) }>Buy {quantity} Ice Cream</button>
         </div>
     )
 } 
@@ -21,7 +21,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        buyIceCream: (number) => dispatch(buyIceCream(number))
+        buyIceCream: (quantity) => dispatch(buyIceCream(quantity))
     }
 } 
 

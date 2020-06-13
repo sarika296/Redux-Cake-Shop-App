@@ -1,5 +1,6 @@
 import { BUY_CAKE } from './cakeTypes'
-const initialState = {
+ 
+export const initialState = {
     numOfCakes: 10
 }
 

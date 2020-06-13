@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { storeMoney } from "../redux"
 
 function CounterContainer(props) {
     return (
@@ -17,10 +16,4 @@ const mapStateToProps = state => {
      }
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        storeMoney: (number) => dispatch(storeMoney(number))
-    }
-} 
-
-export default connect(mapStateToProps, mapDispatchToProps)(CounterContainer);
+export default connect(mapStateToProps)(CounterContainer);
